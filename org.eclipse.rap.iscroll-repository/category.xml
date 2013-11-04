@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.rap.iscroll_0.0.0.qualifier.jar" id="org.eclipse.rap.iscroll" version="0.0.0">
+      <category name="RAP iScroll"/>
+   </feature>
+   <category-def name="RAP iScroll" label="RAP iScroll">
+      <description>
+         iScroll for RAP 2.2
+      </description>
+   </category-def>
+</site>
