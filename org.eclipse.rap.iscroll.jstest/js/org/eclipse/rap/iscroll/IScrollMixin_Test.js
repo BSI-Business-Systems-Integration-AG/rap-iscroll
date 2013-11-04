@@ -1,5 +1,5 @@
 ﻿/*******************************************************************************
- * Copyright (c) 2012 EclipseSource and others.
+ * Copyright (c) 2012, 2013 EclipseSource and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -24,9 +24,9 @@ var scrollable;
 var clientArea;
 var content;
 
-qx.Class.define( "org.eclipse.rap.iscroll.IScrollMixin_Test", {
+rwt.qx.Class.define( "org.eclipse.rap.iscroll.IScrollMixin_Test", {
 
-  extend : qx.core.Object,
+  extend : rwt.qx.Object,
 
   members : {
 
@@ -65,6 +65,7 @@ qx.Class.define( "org.eclipse.rap.iscroll.IScrollMixin_Test", {
       content.setWidth( 500 );
       content.setHeight( 1500 );
       TestUtil.flush();
+      TestUtil.forceTimerOnce();
 
       assertEquals( -410, scrollable.getIScroll().maxScrollX );
       assertEquals( -1410, scrollable.getIScroll().maxScrollY );
@@ -77,6 +78,16 @@ qx.Class.define( "org.eclipse.rap.iscroll.IScrollMixin_Test", {
 
       assertEquals( -960, scrollable.getIScroll().maxScrollX );
       assertEquals( -710, scrollable.getIScroll().maxScrollY );
+    },
+
+    testIScrollScrollerSizeChangedByContent : function() {
+      content.setWidth( 500 );
+      content.setHeight( 1500 );
+      TestUtil.flush();
+      TestUtil.forceTimerOnce();
+
+      assertEquals( 500, scrollable.getIScroll().scrollerW );
+      assertEquals( 1500, scrollable.getIScroll().scrollerH );
     },
 
     testSetScrollbarSelection : function() {
