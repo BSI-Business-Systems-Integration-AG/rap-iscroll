@@ -409,6 +409,7 @@
           </plugins>
         </pluginManagement>
 
+        <defaultGoal>org.eclipse.tycho:tycho-versions-plugin:set-version</defaultGoal>
         <plugins>
           <plugin>
             <groupId>org.eclipse.tycho</groupId>
