@@ -392,6 +392,7 @@
       <properties>
         <iscroll.version.base>1.2.0</iscroll.version.base>
         <milestone.version>I</milestone.version>
+        <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
         <newVersion>${iscroll.version.base}.${maven.build.timestamp}-${milestone.version}</newVersion>
       </properties>
       <activation>
